@@ -1,0 +1,56 @@
+.notimaindiv{
+   
+    border-radius: 20px;
+    margin-left: 42vw;
+    position: absolute;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.806);
+    width: 340px;
+    height:300px;
+    padding: 20px;
+    p{
+        color: rgba(250, 235, 215, 0.635);
+        font-size: 25px;
+    }
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    animation-name: notianim;
+    animation-duration: 2s;
+}
+
+
+.notimaindiv button:nth-child(2){
+    background-color: rgb(69, 153, 255);
+    color: antiquewhite;
+}
+.notimaindiv button:nth-child(2):hover{
+   background-color: black;
+}
+
+
+.notimaindiv button{
+    margin-top: 20px;
+    border: none;
+    align-self: center;
+    width: 150px;
+    height: 60px;
+    font-size: 24px;
+    border-radius: 12px;
+}
+.notimaindiv button:hover{
+    background-color: black;
+    color: antiquewhite;
+}
+
+@keyframes notianim{
+    0%{
+        margin-top: -350px;
+
+    }
+   
+    100%{
+        margin-top: 30px;
+    }
+}

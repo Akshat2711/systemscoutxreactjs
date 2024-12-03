@@ -1,0 +1,69 @@
+.overlay_parent{
+    display: flex;
+    position: absolute;
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.336);
+    
+}
+
+
+.overlay_parent_child {
+    border-radius: 20px;
+    height: 75vh;
+    width: 60vw;
+    background-color: rgba(126, 122, 105, 0.884);
+    position: relative; /* Added to make this the reference for positioning children */
+}
+
+.closeoverlay {
+    background-color: transparent;
+    border: none;
+    height: 50px;
+    width: 50px;
+   
+}
+
+.closebtndiv{
+    position: absolute; /* Change from fixed to absolute */
+    z-index: 10;
+    right: 20px;
+    top: 20px;
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\close.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.statscontainer{
+    position: absolute;
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:60vh;
+    width: 60vw;
+}
+
+.statsbox{
+    border-radius: 20px;
+    height:27vh;
+    width: 18vw;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.767);
+    color: antiquewhite;
+}
+
+#gpuinfodash{
+    font-size: 15px;
+}
+
+#osinfodash{
+    line-height: 2;
+}

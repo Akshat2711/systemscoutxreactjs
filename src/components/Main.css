@@ -1,0 +1,237 @@
+
+/* changes from here */
+
+.maindiv{
+    font-size: 20px;
+background-color: rgba(70, 55, 86, 0.562);
+height: 100vh;
+}
+.smallbox{
+    color: antiquewhite;
+    background-color: rgba(91, 26, 91, 0.395);
+    height:22.5vh;
+    width: 23vh;
+    border-radius: 10px;
+    margin-top: 12px;
+    margin-left: 10px;
+
+}
+.sidebar{
+    width: fit-content;
+}
+.aibox {
+    h1{
+        margin-top:-2.5vh;
+        color: cadetblue;
+        font-size: 5vh;
+    }
+    padding: 15px;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    line-height: 2;
+    color: rgb(213, 109, 144);
+    margin-top: 22px;
+    background-color: rgba(14, 55, 55, 0.393);
+    height: 63vh;
+    width: 40vw;
+    margin-left: 2vw;
+    border-radius: 10px;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.aibox::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+
+.mainbox{
+    display: flex;
+    flex-direction: row;
+}
+.middlearea{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.bottombar{
+    bottom: 0;
+    margin-bottom: 20px;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.354);
+    height:25vh;
+    width:83vw;
+    margin-left: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.bottombox{
+    margin-top: 12px;
+    height:22vh;
+    width:22vh;
+    background-color: rgb(64, 55, 72);
+    margin-left:19px;
+    border-radius: 10px;
+
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\computer-icon-symbol-sign-vector-removebg-preview.png");
+    background-position: center;
+    background-size: 12vw 12vw;
+    background-repeat: no-repeat;
+
+    p{
+        padding-top: 10px;
+        color: rgb(220, 204, 184);
+    }
+
+}
+.bottombox:hover{
+    z-index: 100;
+ background-color: rgba(127, 255, 212, 0.317);
+}
+
+
+
+
+
+.rightarea{
+    margin-left: 2vw;
+}
+
+.rightbox{
+    margin-top: 10px;
+    border-radius: 10px;
+    height:23vh;
+    width:23vh;
+    margin-bottom: 10px;
+    background-color: rgb(187, 184, 184);
+}
+
+.rightboxbig{
+    margin-top: -4px;
+    border-radius: 10px;
+    height:40vh;
+    width:23vh;
+    margin-bottom: 10px;
+    background-color: rgb(187, 184, 184);
+}
+
+
+
+.chatarea{
+    overflow:hidden;
+    border-radius: 10px;
+    margin-top: 17px;
+    margin-left: 2vw;
+    height:65vh;
+    width: 44.5vh;
+    background-color: rgb(116, 150, 142);
+    h1{font-size:5vh;
+        margin-top: -8px;
+        color: rgba(250, 235, 215, 0.548);
+    }
+
+}
+
+#osinfo{
+  
+   line-height: 2;
+   font-size: 18px;
+   p{
+    margin-top:1.5vh;
+   }
+}
+
+#adduser {
+    margin-top: 12px;
+    height:22vh;
+    width:22vh;
+    background-color: rgba(64, 55, 72, 0.653);
+    margin-left:25px;
+    border-radius: 10px;
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\icons8-plus-256.png"); /* Use a valid relative path */
+    background-repeat: no-repeat;
+    background-size: 120px 120px; /* Customize size (width height) */
+    background-position: center; /* Center the image */
+}
+
+
+#gpuinfo{
+    p{font-size: 14px;
+    margin-top: -1vh;
+line-height: 1.7;}
+ 
+}
+
+
+
+/* for battery */
+
+.circle-wrap {
+    margin: 50px auto;
+    width: 150px;
+    height: 150px;
+    background: #605c615f;
+    border-radius: 50%;
+  }
+
+  .circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-wrap .circle .mask {
+    clip: rect(0px, 150px, 150px, 75px);
+  }
+
+
+  .circle-wrap .circle .mask .fill {
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: #5c2c61;
+    transform: rotate(0deg); /* Default to 0 degrees */
+    transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
+}
+.circle-wrap .circle .mask.full {
+    clip: rect(0px, 150px, 150px, 75px);
+    background-color: #605c6100;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
+}
+  @keyframes fill {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(10deg);
+    }
+  }
+
+
+  .circle-wrap .inside-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgb(187, 184, 184);
+    line-height: 130px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    z-index: 100;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+
+  .bottombutton{
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+  }
+
+

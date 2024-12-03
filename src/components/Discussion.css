@@ -1,0 +1,142 @@
+
+.chat-area-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures the input stays at the bottom */
+    height: 100vh; /* Makes the container full screen */
+    
+}
+
+.messages-container {
+    flex: 1; /* Fills all available space above the input box */
+    padding: 16px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 47.5%;
+    scrollbar-width: none; /* For Firefox */
+}
+.messages-container::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Edge */
+}
+
+.chat-input-area {
+
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #2d374818;
+    gap: 8px;
+    position: sticky; /* Ensures it's always visible at the bottom */
+    bottom: 0;
+}
+
+.message-input {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    color: #edf2f7;
+    background-color: #4a55684e;
+}
+
+.message-input::placeholder {
+    color: #a0aec0;
+}
+.upload-button{
+    margin-left:-260px;
+}
+.upload-button,
+.send-button {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4a556800;
+    color: #4a5568a7;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover,
+.send-button:hover {
+    background-color: #718096;
+}
+
+
+
+
+
+.hidden{
+    visibility: hidden;
+}
+
+
+
+.message-bubble {
+    max-width: 70%;
+    padding: 12px;
+    border-radius: 18px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.message-bubble.sent {
+    align-self: flex-end;
+    background-color: #513e532c;
+    color: #040e1c;
+}
+
+.message-bubble.received {
+    align-self: flex-start;
+    background-color: #0b46ab28;
+    color: #edf2f7;
+}
+
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 4px;
+    font-size: 17px;
+}
+.image-preview{
+    background-color: transparent;
+    border: none;
+}
+
+.image-preview img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.full-image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+.message-text{
+    font-family: monospace;
+    margin-bottom: -30px;
+}
+
+
