@@ -4,12 +4,12 @@
     margin-left: 42vw;
     position: absolute;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.806);
+    background-color: rgb(255, 255, 255);
     width: 340px;
     height:300px;
     padding: 20px;
     p{
-        color: rgba(250, 235, 215, 0.635);
+        color: rgba(0, 0, 0, 0.635);
         font-size: 25px;
     }
 
@@ -22,7 +22,7 @@
 
 
 .notimaindiv button:nth-child(2){
-    background-color: rgb(69, 153, 255);
+    background-color: rgb(0, 72, 159);
     color: antiquewhite;
 }
 .notimaindiv button:nth-child(2):hover{

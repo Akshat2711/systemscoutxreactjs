@@ -3,7 +3,7 @@ import './Notification.css';
 export const Notification = (props) => {
   return (
     <div className='notimaindiv'>
-        <p>"Akshat" want's you to be part of his dashboard</p>
+        <p>"Akshat" want's you to be part of his dashboard(testing)</p>
 
         <button>
             <div>Accept</div>

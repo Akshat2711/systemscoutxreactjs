@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-height: 47.5%;
+    max-height: 45.5%;
     scrollbar-width: none; /* For Firefox */
 }
 .messages-container::-webkit-scrollbar {
@@ -88,13 +88,13 @@
 
 .message-bubble.sent {
     align-self: flex-end;
-    background-color: #513e532c;
-    color: #040e1c;
+    background-color: #5bff193e;
+    color: #babcbe;
 }
 
 .message-bubble.received {
     align-self: flex-start;
-    background-color: #0b46ab28;
+    background-color: #01296c;
     color: #edf2f7;
 }
 

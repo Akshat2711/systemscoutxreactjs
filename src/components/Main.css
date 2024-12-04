@@ -3,12 +3,12 @@
 
 .maindiv{
     font-size: 20px;
-background-color: rgba(70, 55, 86, 0.562);
+background-color: rgba(1, 1, 1, 0.89);
 height: 100vh;
 }
 .smallbox{
     color: antiquewhite;
-    background-color: rgba(91, 26, 91, 0.395);
+    background-color: rgba(0, 0, 0, 0.393);
     height:22.5vh;
     width: 23vh;
     border-radius: 10px;
@@ -20,21 +20,26 @@ height: 100vh;
     width: fit-content;
 }
 .aibox {
-    h1{
+    h1{ position:absolute;
         margin-top:-2.5vh;
-        color: cadetblue;
+        color:antiquewhite;
         font-size: 5vh;
+        margin-left: 12vw;
+      
+    }
+    p{
+        margin-top: 60px;
     }
     padding: 15px;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     line-height: 2;
-    color: rgb(213, 109, 144);
+    color: rgb(206, 179, 188);
     margin-top: 22px;
-    background-color: rgba(14, 55, 55, 0.393);
+    background-color: rgba(0, 0, 0, 0.393);
     height: 63vh;
     width: 40vw;
-    margin-left: 2vw;
+    margin-left: 1.5vw;
     border-radius: 10px;
     scrollbar-width: none; /* For Firefox */
 }
@@ -59,8 +64,8 @@ height: 100vh;
     margin-bottom: 20px;
     position: absolute;
     z-index: 100;
-    background-color: rgba(255, 255, 255, 0.354);
-    height:25vh;
+    background-color: rgba(0, 0, 0, 0.393);
+    height:28vh;
     width:83vw;
     margin-left: 25px;
     border-radius: 10px;
@@ -73,7 +78,7 @@ height: 100vh;
     margin-top: 12px;
     height:22vh;
     width:22vh;
-    background-color: rgb(64, 55, 72);
+    background-color: rgba(215, 215, 215, 0.863);
     margin-left:19px;
     border-radius: 10px;
 
@@ -84,13 +89,13 @@ height: 100vh;
 
     p{
         padding-top: 10px;
-        color: rgb(220, 204, 184);
+        color: rgb(0, 0, 0);
     }
 
 }
 .bottombox:hover{
     z-index: 100;
- background-color: rgba(127, 255, 212, 0.317);
+ background-color: rgba(255, 255, 255, 0.493);
 }
 
 
@@ -98,6 +103,7 @@ height: 100vh;
 
 
 .rightarea{
+    color:antiquewhite;
     margin-left: 2vw;
 }
 
@@ -107,7 +113,7 @@ height: 100vh;
     height:23vh;
     width:23vh;
     margin-bottom: 10px;
-    background-color: rgb(187, 184, 184);
+    background-color: rgba(0, 0, 0, 0.393);
 }
 
 .rightboxbig{
@@ -116,7 +122,7 @@ height: 100vh;
     height:40vh;
     width:23vh;
     margin-bottom: 10px;
-    background-color: rgb(187, 184, 184);
+    background-color: rgba(0, 0, 0, 0.393);
 }
 
 
@@ -128,19 +134,20 @@ height: 100vh;
     margin-left: 2vw;
     height:65vh;
     width: 44.5vh;
-    background-color: rgb(116, 150, 142);
+    background-color: rgba(0, 0, 0, 0.393);
     h1{font-size:5vh;
-        margin-top: -8px;
-        color: rgba(250, 235, 215, 0.548);
+        margin-top: -20px;
+        color:antiquewhite;
     }
 
 }
 
 #osinfo{
-  
    line-height: 2;
    font-size: 18px;
    p{
+    padding-left:15px;
+    padding-right: 15px;
     margin-top:1.5vh;
    }
 }
@@ -149,7 +156,7 @@ height: 100vh;
     margin-top: 12px;
     height:22vh;
     width:22vh;
-    background-color: rgba(64, 55, 72, 0.653);
+    background-color: rgba(215, 215, 215, 0.863);
     margin-left:25px;
     border-radius: 10px;
     background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\icons8-plus-256.png"); /* Use a valid relative path */
@@ -193,13 +200,13 @@ line-height: 1.7;}
 
   .circle-wrap .circle .mask .fill {
     clip: rect(0px, 75px, 150px, 0px);
-    background-color: #5c2c61;
+    background-color: #aca3ad;
     transform: rotate(0deg); /* Default to 0 degrees */
     transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
 }
 .circle-wrap .circle .mask.full {
     clip: rect(0px, 150px, 150px, 75px);
-    background-color: #605c6100;
+    background-color: #4fd70b00;
     transition: transform 0.5s ease-in-out; /* Smooth transition for rotation */
 }
   @keyframes fill {
@@ -216,7 +223,7 @@ line-height: 1.7;}
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    background: rgb(187, 184, 184);
+    background: rgb(25, 23, 23);
     line-height: 130px;
     text-align: center;
     margin-top: 10px;
@@ -234,4 +241,54 @@ line-height: 1.7;}
     background-color: transparent;
   }
 
+  
+  .expandchatbtn{
+    font-size: 30px;
+    margin-left: 22vw;
+    color:antiquewhite;
+    border: none;
+    background-color: transparent;
 
+    
+  }
+
+
+  .highlight_specs{
+    color: rgb(123, 240, 133);
+  }
+
+    
+  .expandchatbtn:hover{
+    color: rgb(44, 205, 58);
+
+    
+  }
+
+
+  .expandedchat{
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    z-index: 1000;
+    height:100vh;
+    width: 100vw;
+    overflow-y: hidden;
+  }
+
+
+
+  .closechatbtn{
+    font-size: 60px;
+    margin-left: 40px;
+    color: aliceblue;
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+
+  }
+
+  .closechatbtn:hover{
+    color: rgb(53, 131, 170);
+  }

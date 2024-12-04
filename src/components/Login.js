@@ -22,6 +22,8 @@ export const Login = () => {
           <div>
           </div>
           <div>
+            <input placeholder="Enter Username!" ></input>
+            <button></button>
             <input placeholder="Enter Password!" type='password'></input>
           </div>
         </div>
