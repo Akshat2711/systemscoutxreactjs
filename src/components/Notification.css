@@ -1,16 +1,20 @@
 .notimaindiv{
    
-    border-radius: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 30px;
     margin-left: 42vw;
     position: absolute;
     z-index: 1000;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.386);
+    backdrop-filter: blur(10px);
     width: 340px;
     height:300px;
     padding: 20px;
+    scrollbar-width: none;
     p{
         color: rgba(0, 0, 0, 0.635);
-        font-size: 25px;
+        font-size: 30px;
     }
 
     display: flex;
@@ -21,26 +25,28 @@
 }
 
 
-.notimaindiv button:nth-child(2){
-    background-color: rgb(0, 72, 159);
+#lookbtn{
+    background-color: rgb(43, 117, 209);
     color: antiquewhite;
 }
-.notimaindiv button:nth-child(2):hover{
-   background-color: black;
+#lookbtn:hover{
+   background-color: rgb(70, 70, 70);
 }
 
 
-.notimaindiv button{
+#lookbtn,#ignorebtn{
+    padding-left: 40px;
+    padding-right: 40px;
     margin-top: 20px;
     border: none;
     align-self: center;
     width: 150px;
     height: 60px;
     font-size: 24px;
-    border-radius: 12px;
+    border-radius: 30px;
 }
 .notimaindiv button:hover{
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.534);
     color: antiquewhite;
 }
 
@@ -53,4 +59,61 @@
     100%{
         margin-top: 30px;
     }
+}
+
+
+.notimaindiv li{
+    list-style-type: none; 
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.518);
+    font-weight: 600;
+}
+
+.notimaindiv ul{
+    padding: 0;
+}
+
+h1{
+    font-size: 35px;
+    color: rgba(240, 248, 255, 0.792);
+    margin-bottom: -5px;
+    margin-top: -5px;
+
+}
+
+h2{
+    margin: 0;
+    color: rgba(255, 255, 255, 0.445);
+    font-weight: 700;
+}
+
+
+.acceptbtn{
+    background-color: rgb(70, 131, 224);
+    font-size: 20px;
+    color:white;
+    padding:10px;
+    padding-left: 30px;
+    padding-right:30px;
+    border: none;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+.acceptbtn:hover{
+    background-color: rgb(63, 62, 62);
+}
+
+.hiddenicon{
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\hidden.png");
+    background-position: center;
+    background-size: 60px 60px;
+    background-repeat: no-repeat;
+    width: 100px;
+    height:100px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hiddenicon:hover{
+    transform: scale(1.2);
 }

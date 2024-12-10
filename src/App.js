@@ -15,6 +15,7 @@ function App() {
           {/* Home route */}
           <Route path="/main" element={<Main/>} />
 
+        
           {/* Uncomment this if you want a fallback for undefined routes */}
           {/* <Route path="*" element={<NoPage />} /> */}
         </Routes>

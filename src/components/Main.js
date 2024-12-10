@@ -4,12 +4,18 @@ import './Main.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Discussion } from './Discussion.js';
 import { Overlaydashboard } from './Overlaydashboard.js';
+
 import { db } from '../firebase/firebase'; 
-import { ref as dbRef, set, onValue } from "firebase/database";
+import { ref as dbRef, set, onValue, update } from "firebase/database";
+
 import { Notification } from './Notification.js';
 
+import { Requestdash } from './Requestdash.js';
+import { Getlocation } from './Getlocation.js';
+
+
 const Main = () => {
-  const username = "meet";
+  const username = localStorage.getItem("user");
   const genAI = new GoogleGenerativeAI("AIzaSyCwIyE-xCxFunqmq65GmhS6VgKmY1Cpkfs"); // Replace with your actual API key
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
@@ -20,6 +26,9 @@ const Main = () => {
   const [selectedUser, setSelectedUser] = useState(null);
   const [notivis,setnotivis]=useState(true);
   const [expandedchat,setexpandedchat]=useState(false);
+  const[requestdash,setrequestdash]=useState(false);
+
+  const friend_array=[];
 
 
 /* 
@@ -67,14 +76,16 @@ const Main = () => {
 
 
 
-
   useEffect(() => {
-    // Fetch the logged-in user's system info
     const getData = async () => {
       try {
+        // Retrieve the user's location
+        const location_user = await Getlocation(); // Await the promise
+  
+        // Fetch the logged-in user's system info
         const data = await fetchSystemInfo();
         setInfo(data);
-
+  
         // Save current user's info to Firebase
         const timestamp = Date.now();
         const msgRef = dbRef(db, `systemscoutpcinfo/${username}`);
@@ -82,30 +93,45 @@ const Main = () => {
           user: username,
           timestamp: timestamp,
           message: data || '',
+          long: location_user.latitude, // Properly assign latitude
+          lati: location_user.longitude, // Properly assign longitude
         };
-
-        await set(msgRef, messageData);
+  
+        await update(msgRef, messageData);
         console.log("Data updated successfully");
       } catch (error) {
-        console.error('Failed to fetch system info:', error);
+        console.error('Failed to fetch data or update Firebase:', error);
       }
     };
-
+  
+    const fetchUsersData = () => {
+      const usersRef = dbRef(db, 'systemscoutpcinfo');
+      onValue(usersRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const usersArray = Object.keys(data).map((key) => ({
+            username: key,
+            info: data[key].message,
+          }));
+  
+          // Fetch friend list and filter usersData
+          const newRef = dbRef(db, `systemscoutpcinfo/${username}/friends`);
+          onValue(newRef, (friendsSnapshot) => {
+            const friendsData = friendsSnapshot.val();
+            const friendArray = Object.values(friendsData || {}).map((friend) => friend.name);
+  
+            const filteredUsers = usersArray.filter((user) => friendArray.includes(user.username));
+            setUsersData(filteredUsers);
+          });
+        }
+      });
+    };
+  
     getData();
-
-    // Fetch all users' system info from Firebase
-    const usersRef = dbRef(db, 'systemscoutpcinfo');
-    onValue(usersRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const usersArray = Object.keys(data).map((key) => ({
-          username: key,
-          info: data[key].message,
-        }));
-        setUsersData(usersArray);
-      }
-    });
+    fetchUsersData();
   }, []);
+  
+  
 
   // Handle user button click
   const handleUserClick = (user) => {
@@ -122,6 +148,8 @@ const Main = () => {
 {/* notification */}
       {(notivis) &&<Notification ignorebtn={()=>setnotivis(false)}/>}
 
+{/* requestdash */}
+{(requestdash) && <Requestdash/>}
 
 
 {/* dashboard */}
@@ -177,6 +205,9 @@ const Main = () => {
             <h1>AI Summary</h1>
             <p>{aiSummary || "Generating AI summary..."}</p>
           </div>
+        </div>
+
+        <div className='bottomarea'>
           <div className='bottombar'>
             {usersData.map((user) => (
               <button
@@ -190,12 +221,15 @@ const Main = () => {
               </button>
             ))}
 
-            <button className='bottombutton'>
+            <button className='bottombutton' onClick={()=>{setrequestdash(true)}} >
             <div id="adduser">
             </div>
             </button>
           </div>
         </div>
+
+
+    
 
         <div className='rightarea'>
           <div className='rightboxbig'>

@@ -1,44 +1,77 @@
 .parent{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: rgb(194, 161, 161);
+    background-image: url(C:\codes\systemscoutxreactjs\systemscout\public\assets\login.jpg);
+    background-size: cover;
     display: flex;
   justify-content: center;
   align-items: center;
   input{
     text-align: center;
-    color: rgb(7, 2, 11);
+    color: rgb(205, 199, 209);
     border: none;
-    background-color: antiquewhite;
-    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.42);
+    font-size: 2vh;
     padding: 6px;
     border-radius: 20px;
     width: 18vw;
     height:4vh;
-    margin-top:15vh;
+    margin-bottom: 2vh;
 }
 
+}
+
+
+.profile_container{
+    height:20vh;
+    width:20vw;
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\Profile-PNG-Picture.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-size: 13vw 20vh;
 }
 
 .child{
-    background-color: rgba(199, 112, 204, 0.507);
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(6px);
     height: 50vh;
     width:30vw;
+    padding: 20px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.child:hover{
+    transform:scale(1.2);
+}
+
+.inputcontainer{
+    height: fit-content;
+    width: fit-content;
+    margin-top: 10vh;
 }
 
 
+.login_btn{
+    font-weight: 700;
+    background-color: rgba(12, 97, 167, 0.482);
+    color: aliceblue;
+    border-radius: 30px;
+    margin: 10px;
+    font-size: larger;
+    width: 10vw;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding: 15px;
+    border: none;
+}
 
-
-.username{
-    padding: 20px;
-    h1{font-weight:900;
-        padding: 10px;
-        font-size: 4vh;
-        font-family:Arial, Helvetica, sans-serif;
-        background-color: rgba(84, 69, 169, 0.804);
-        border-radius: 20px;
-        overflow-wrap: break-word;
-        color: antiquewhite;
-    }
+.login_btn:hover{
+    background-color: rgba(0, 0, 0, 0.326);
+    color: rgba(240, 248, 255, 0.543);
 }

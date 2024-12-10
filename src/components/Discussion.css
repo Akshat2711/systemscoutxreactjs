@@ -81,6 +81,8 @@
 .message-bubble {
     max-width: 70%;
     padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px ;
     border-radius: 18px;
     font-size: 16px;
     line-height: 1.5;
@@ -88,14 +90,16 @@
 
 .message-bubble.sent {
     align-self: flex-end;
-    background-color: #5bff193e;
-    color: #babcbe;
+    background-color: #2fae5769;
+    backdrop-filter: blur(10px);
+    color: #dfdfdf;
 }
 
 .message-bubble.received {
     align-self: flex-start;
-    background-color: #01296c;
-    color: #edf2f7;
+    background-color: #4f70a952;
+    backdrop-filter: blur(10px);
+    color: #cad1d8;
 }
 
 .message-sender {

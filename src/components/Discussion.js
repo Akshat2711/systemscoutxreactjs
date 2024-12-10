@@ -99,7 +99,7 @@ export const Discussion = () => {
                         key={msg.id}
                         className={`message-bubble ${msg.msgfrom === username ? "sent" : "received"}`}
                     >
-                        <strong className="message-sender">{msg.msgfrom}</strong>
+                        <strong className="message-sender" style={{color:"black"}}>{msg.msgfrom}</strong>
                         {msg.message && <div className="message-text">{msg.message}</div>}
                         <br></br>
                         {msg.imageUrl && (
