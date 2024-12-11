@@ -63,10 +63,10 @@ const Main = () => {
       const ele = document.getElementsByClassName("chat-area-container")[0];
       const ele2 = document.getElementsByClassName("chat-input-area")[0];
       if (ele && ele2) {
-        ele.style.height = "195vh";
+        ele.style.height = "93vh";
         ele2.style.position = "fixed";
         ele2.style.bottom = "0";
-        ele2.style.width = "98vw";
+        ele2.style.width = "110vw";
         ele2.style.height = "5vh";
         ele2.style.marginBottom = "2px"; 
       }
@@ -143,13 +143,20 @@ const Main = () => {
 
   return (
     <div className='maindiv'>
+
+{/* Background Video */}
+<video autoPlay muted loop className="bg-video">
+    <source src="/assets/Main_bg_video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
       
 
 {/* notification */}
       {(notivis) &&<Notification ignorebtn={()=>setnotivis(false)}/>}
 
 {/* requestdash */}
-{(requestdash) && <Requestdash/>}
+{(requestdash) && <Requestdash closerequestdash={()=>{setrequestdash(false)}} />}
 
 
 {/* dashboard */}
@@ -162,8 +169,7 @@ const Main = () => {
 
 {/* expand chat functionality */}
 {(expandedchat)&&
-<div className='expandedchat'>
-  <button className='closechatbtn' onClick={()=>{setexpandedchat(false)}}>x</button>
+<div className='expandedchat' onClick={()=>{setexpandedchat(false)}}>
   <Discussion/>
 </div>
 }

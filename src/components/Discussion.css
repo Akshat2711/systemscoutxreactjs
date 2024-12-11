@@ -1,34 +1,78 @@
-
 .chat-area-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures the input stays at the bottom */
-    height: 100vh; /* Makes the container full screen */
-    
+    justify-content: space-between;
+    height: 57vh;
 }
 
 .messages-container {
-    flex: 1; /* Fills all available space above the input box */
+    flex: 1;
     padding: 16px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    max-height: 45.5%;
-    scrollbar-width: none; /* For Firefox */
+    gap: 16px;
+    scrollbar-width: none; /* Firefox */
 }
+
 .messages-container::-webkit-scrollbar {
-    display: none; /* For Chrome, Safari, and Edge */
+    display: none; /* Chrome, Safari, Edge */
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+}
+
+.message-sender {
+    font-size: 14px;
+    color: #6b7280; /* Subtle gray */
+    margin-left: 8px;
+}
+
+.message-sender.sent {
+    text-align: right;
+    color: #b2bde6b8; /* Green for sent messages */
+    margin-right: 8px;
+}
+
+.message-sender.received {
+    text-align: left;
+    color: #4f70a9; /* Blue-gray for received messages */
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle depth */
+}
+
+.message-bubble.sent {
+    align-self: flex-end;
+    background: linear-gradient(135deg, rgb(9, 45, 56), #141313a7); /* Gradient for sent */
+    color: white;
+}
+
+.message-bubble.received {
+    align-self: flex-start;
+    background: linear-gradient(135deg, #d1d5dbfb, #d2d4d753); /* Gradient for received */
+    color: black;
 }
 
 .chat-input-area {
-
+    margin-left: -12vw;
     display: flex;
     align-items: center;
     padding: 12px;
     background-color: #2d374818;
     gap: 8px;
-    position: sticky; /* Ensures it's always visible at the bottom */
+    position: sticky;
     bottom: 0;
 }
 
@@ -45,9 +89,7 @@
 .message-input::placeholder {
     color: #a0aec0;
 }
-.upload-button{
-    margin-left:-260px;
-}
+
 .upload-button,
 .send-button {
     border: none;
@@ -68,48 +110,8 @@
     background-color: #718096;
 }
 
-
-
-
-
-.hidden{
+.hidden {
     visibility: hidden;
-}
-
-
-
-.message-bubble {
-    max-width: 70%;
-    padding: 12px;
-    padding-left: 20px;
-    padding-right: 20px ;
-    border-radius: 18px;
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-.message-bubble.sent {
-    align-self: flex-end;
-    background-color: #2fae5769;
-    backdrop-filter: blur(10px);
-    color: #dfdfdf;
-}
-
-.message-bubble.received {
-    align-self: flex-start;
-    background-color: #4f70a952;
-    backdrop-filter: blur(10px);
-    color: #cad1d8;
-}
-
-.message-sender {
-    font-weight: bold;
-    margin-bottom: 4px;
-    font-size: 17px;
-}
-.image-preview{
-    background-color: transparent;
-    border: none;
 }
 
 .image-preview img {
@@ -118,6 +120,14 @@
     border-radius: 8px;
     cursor: pointer;
 }
+
+.image-preview{
+    background-color: transparent;
+    border: none;
+}
+
+
+
 
 .full-image-modal {
     position: fixed;
@@ -138,9 +148,7 @@
     border-radius: 8px;
 }
 
-.message-text{
+.message-text {
     font-family: monospace;
-    margin-bottom: -30px;
+    margin-bottom: -4px;
 }
-
-

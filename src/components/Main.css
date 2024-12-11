@@ -1,26 +1,38 @@
 
 /* changes from here */
 
-.maindiv{
-font-size: 1.5vh;
-height: 100vh;
-position: absolute;
-z-index: -100;
+.maindiv {
+  font-size: 1.5vh;
+  height: 100vh;
+  position: relative; /* Changed to ensure content is positioned relative to this */
 }
-body{
-  background-color:rgb(1, 1, 1) ;
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensures the video stays in the background */
+}
+
+body {
+  margin: 0;
+  overflow: hidden; /* Prevents scrollbars */
 }
 
 
 .smallbox{
   font-size:1.7vh;
     color: antiquewhite;
-    background-color: rgb(17, 16, 16);
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
     min-height:22.5vh;
     width: 23vh;
     border-radius: 10px;
-    margin-top: 12px;
-    margin-left: 10px;
+    margin-top: 2vh;
+    margin-left: 1vw;
     position: relative;
 }
 
@@ -37,21 +49,22 @@ body{
      position: relative;
     h1{ position:absolute;
         margin-top:-2.5vh;
-        color:antiquewhite;
+        color:rgba(255, 255, 255, 0.568);
         font-size: 5vh;
         margin-left: 12vw;
       
     }
     p{
-        margin-top: 60px;
+        margin-top: 6vh;
     }
     padding: 15px;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Prevent horizontal scrolling */
     line-height: 2;
     color: rgb(206, 179, 188);
-    margin-top: 22px;
-    background-color: rgb(17, 16, 16);
+    margin-top: 2vh;
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
     height: 63vh;
     width: 40vw;
     margin-left: 1.5vw;
@@ -87,24 +100,28 @@ bottom: 0;
 
 .bottombar{
     position: relative;
-    margin-bottom: 20px;
-    background-color: rgb(17, 16, 16);
+    margin-bottom: 2vh;
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
     height:28vh;
     width:83vw;
-    margin-left: 25px;
+    margin-left: 1.8vw;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     padding: 5px;
+
+    overflow-x: scroll;
+    scrollbar-width: none;
     
 }
 
 .bottombox{
-    margin-top: 12px;
+    margin-top: 1vh;
     height:22vh;
     width:22vh;
-    background-color: rgba(137, 137, 137, 0.863);
-    margin-left:19px;
+    background-color: rgba(255, 255, 255, 0.299);
+    margin-left:2vw;
     border-radius: 10px;
 
     background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\computer-icon-symbol-sign-vector-removebg-preview.png");
@@ -136,22 +153,23 @@ bottom: 0;
 
 .rightbox{
   position: relative;
-    margin-top: 10px;
+    margin-top: 2.3vh;
     border-radius: 10px;
     height:23vh;
     width:23vh;
-    margin-bottom: 10px;
-    background-color: rgb(17, 16, 16);
+    margin-bottom: 1vh;
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
 }
 
 .rightboxbig{
   position: relative;
-    margin-top: -4px;
+    margin-top: 2vh;
     border-radius: 10px;
     height:40vh;
     width:23vh;
-    margin-bottom: 10px;
-    background-color: rgb(17, 16, 16);
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
 }
 
 
@@ -159,20 +177,24 @@ bottom: 0;
 .chatarea{
     overflow:hidden;
     border-radius: 10px;
-    margin-top: 17px;
+    margin-top: 2vh;
     margin-left: 2vw;
     height:65vh;
     width: 44.5vh;
-    background-color: rgb(17, 16, 16);
+    background-color: rgba(17, 16, 16, 0.589);
+    backdrop-filter: blur(4px);
     h1{font-size:5vh;
-        margin-top: -20px;
-        color:antiquewhite;
+        margin-top: -2vh;
+        color:rgba(255, 255, 255, 0.523);
     }
     position: relative;
 
 }
 
 #osinfo{
+  h1{
+    color: rgba(255, 255, 255, 0.523);
+  }
    line-height: 2;
    font-size: 1.5vh;
    p{
@@ -183,24 +205,40 @@ bottom: 0;
 }
 
 #adduser {
-    margin-top: 12px;
-    height:22vh;
-    width:22vh;
-    background-color: rgba(137, 137, 137, 0.863);
-    margin-left:25px;
-    border-radius: 10px;
-    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\icons8-plus-256.png"); /* Use a valid relative path */
-    background-repeat: no-repeat;
-    background-size: 120px 120px; /* Customize size (width height) */
-    background-position: center; /* Center the image */
+  margin-top: 1.5vh;
+  height: 22vh;
+  width: 22vh;
+  background-color: rgba(255, 255, 255, 0.299);
+  margin-left: 2vw;
+  border-radius: 10px;
+  position: relative; /* Required for pseudo-elements */
+  overflow: hidden; /* Ensures pseudo-elements don't overflow the container */
 }
 
+#adduser::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12vh; /* Same as background-size width */
+  height: 12vh; /* Same as background-size height */
+  background-image: url("C:/codes/systemscoutxreactjs/systemscout/public/assets/icons8-plus-256.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+#adduser:hover::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
 
 
 #gpuinfo{
     p{font-size: 1.3vh;
-    margin-top: -1vh;
-line-height: 1.7;}
+    margin-top: 1.2vh;
+}
  
 }
 
@@ -212,7 +250,7 @@ line-height: 1.7;}
   height: 150px;
   position: relative; /* Ensure proper positioning for child elements */
   border-radius: 50%;
-  background-color: #58b255d6; /* Background for the circle */
+  background-color: rgb(43, 112, 133); /* Background for the circle */
 }
 
 .circle-wrap .circle {
@@ -242,7 +280,7 @@ line-height: 1.7;}
 
 .circle-wrap .circle .mask.full {
   clip: rect(0px, 150px, 150px, 75px); /* Full mask for the second half */
-  background-color: #58b255d6;
+  background-color:  rgb(43, 112, 133);
   transform: rotate(0deg); /* Default rotation for the full mask */
   transition: transform 0.5s ease-in-out;
 }
@@ -251,7 +289,7 @@ line-height: 1.7;}
   width: 130px;
   height: 130px;
   border-radius: 50%;
-  background: rgb(17, 16, 16); /* Inner circle background */
+  background: rgba(0, 0, 0, 0.966); /* Inner circle background */
   line-height: 130px; /* Center align text vertically */
   text-align: center; /* Center align text horizontally */
   margin: 10px auto; /* Center the inner circle */
@@ -263,7 +301,7 @@ line-height: 1.7;}
   z-index: 100;
   font-weight: 700;
   font-size: 2em;
-  color: white; /* Text color */
+  color: rgb(177, 182, 186); /* Text color */
 }
 
 @keyframes fill {
@@ -285,7 +323,7 @@ line-height: 1.7;}
 
   
   .expandchatbtn{
-    font-size: 30px;
+    font-size: 3vh;
     margin-left: 22vw;
     color:antiquewhite;
     border: none;
@@ -296,12 +334,12 @@ line-height: 1.7;}
 
 
   .highlight_specs{
-    color: rgb(123, 240, 133);
+    color: rgb(65, 157, 185);
   }
 
     
   .expandchatbtn:hover{
-    color: rgb(44, 205, 58);
+    color: rgb(100, 155, 255);
 
     
   }
@@ -318,124 +356,108 @@ line-height: 1.7;}
 
 
 
-  .closechatbtn{
-    font-size: 60px;
-    margin-left: 40px;
-    color: aliceblue;
-    background-color: transparent;
-    position: absolute;
-    left: 0;
-    margin-top: 20px;
-    border-radius: 20px;
-    border: none;
-
-  }
-
-  .closechatbtn:hover{
-    color: rgb(245, 74, 74);
-  }
 
 
 
-
-  /* below property for moving boreder */
-@property --angle{
-  syntax:"<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-
-.smallbox::after,.smallbox::before,.rightbox::after,.rightbox::before,.rightboxbig::after,.rightboxbig::before{
-  content: '';
-  position: absolute;
-  height: 99%;
-  width:99%;
-  background-image: conic-gradient(from var(--angle),transparent 10%,rgb(54, 255, 111)) ;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  padding: 0px;/* to get line increase this */
-  border-radius: 10px;
-  animation: 20s spin linear infinite;
-}
-
-
-.smallbox::before,.rightbox::before,.rightboxbig::before{
-  filter: blur(1.5rem);
-  opacity:0.5 ;
-}
-
-@keyframes spin {
-  from{
-    --angle:0deg;
-  }
-  to{
-    --angle:360deg;
+  /* below property for moving boreder 
+  @property --angle{
+    syntax:"<angle>";
+    initial-value: 0deg;
+    inherits: false;
   }
   
-}
-
-/* end of border propertty */
-
-
-
-
-
-/* same property for ai box specially currateted(border thing) */
-
-.middlearea::after,.middlearea::before{
-  margin-top: 20px;
-  margin-left: 1.2vw;
-  content: '';
-  position: absolute;
-  height: 63vh;
-  width:40vw;
-  background-image: conic-gradient(from var(--angle),transparent 10%,rgb(255, 54, 195)) ;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  border-radius: 20px;
-  padding: 5px;
-  animation: 20s spin linear infinite;
-}
-
-
-.middlearea::before{
-  filter: blur(1.5rem);
-  opacity:0.5 ;
-}
-
-/* end here */
-
-
-/* same property for bootom bar  specially currateted(border thing) */
-
-.bottomarea::after,.bottomarea::before{
-  margin-top: -10px;
-  margin-left: 0.5vw;
-  content: '';
-  position: absolute;
-  height: 27vh;
-  width:82vw;
-  background-image: conic-gradient(from var(--angle),transparent 10%,rgb(211, 213, 218)) ;
-  top: 50%;
-  left: 50%;
-  translate: -50% -50%;
-  z-index: -1;
-  border-radius: 10px;
-  padding: 8px;
-  animation: 20s spin linear infinite;
-}
-
-
-.bottomarea::before{
-  filter: blur(1.5rem);
-  opacity:0.5 ;
-}
-
-/* end here */
-
-
-
+  .smallbox::after,.smallbox::before,.rightbox::after,.rightbox::before,.rightboxbig::after,.rightboxbig::before{
+    content: '';
+    position: absolute;
+    height: 99%;
+    width:99%;
+    background-image: conic-gradient(from var(--angle),transparent 10%,rgb(54, 255, 111)) ;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 0px;
+    border-radius: 10px;
+    animation: 20s spin linear infinite;
+  }
+  
+  
+  .smallbox::before,.rightbox::before,.rightboxbig::before{
+    filter: blur(1.5rem);
+    opacity:0.5 ;
+  }
+  
+  @keyframes spin {
+    from{
+      --angle:0deg;
+    }
+    to{
+      --angle:360deg;
+    }
+    
+  }
+  
+  end of border propertty 
+  
+  
+  
+  
+  
+   same property for ai box specially currateted(border thing) 
+  
+  .middlearea::after,.middlearea::before{
+    margin-top: 20px;
+    margin-left: 1.2vw;
+    content: '';
+    position: absolute;
+    height: 63vh;
+    width:40vw;
+    background-image: conic-gradient(from var(--angle),transparent 10%,rgb(255, 54, 195)) ;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 20px;
+    padding: 5px;
+    animation: 20s spin linear infinite;
+  }
+  
+  
+  .middlearea::before{
+    filter: blur(1.5rem);
+    opacity:0.5 ;
+  }
+  
+   end here 
+  
+  
+  same property for bootom bar  specially currateted(border thing) 
+  
+  .bottomarea::after,.bottomarea::before{
+    margin-top: -10px;
+    margin-left: 0.5vw;
+    content: '';
+    position: absolute;
+    height: 27vh;
+    width:82vw;
+    background-image: conic-gradient(from var(--angle),transparent 10%,rgb(211, 213, 218)) ;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 10px;
+    padding: 8px;
+    animation: 20s spin linear infinite;
+  }
+  
+  
+  .bottomarea::before{
+    filter: blur(1.5rem);
+    opacity:0.5 ;
+  }
+ */  
+  /* end here */
+  
+  
+  
+  

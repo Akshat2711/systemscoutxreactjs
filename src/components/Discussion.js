@@ -7,7 +7,7 @@ import { RiImageAddFill } from 'react-icons/ri';
 import "./Discussion.css";
 
 export const Discussion = () => {
-    const username = "akshat";
+    const username = localStorage.getItem("user");
     const [showfullimg, setshowfullimg] = useState(false);
     const [fullimgsrc, setfullimgsrc] = useState("");
     const [users, setusers] = useState([]);
@@ -93,64 +93,75 @@ export const Discussion = () => {
 
     return (
         <div className="chat-area-container">
-            <div className="messages-container">
-                {messages.map((msg) => (
-                    <div
-                        key={msg.id}
-                        className={`message-bubble ${msg.msgfrom === username ? "sent" : "received"}`}
-                    >
-                        <strong className="message-sender" style={{color:"black"}}>{msg.msgfrom}</strong>
-                        {msg.message && <div className="message-text">{msg.message}</div>}
-                        <br></br>
-                        {msg.imageUrl && (
-                            
-                            <button
-                                onClick={() => {
-                                    setshowfullimg(true);
-                                    setfullimgsrc(msg.imageUrl);
-                                }}
-                                className="image-preview"
-                            >
-                                <img src={msg.imageUrl} alt="Uploaded" />
-                            </button>
-                        )}
-                    </div>
-                ))}
-            </div>
-
-            {showfullimg && (
-                <div className="full-image-modal" onClick={() => setshowfullimg(false)}>
-                    <img
-                        src={fullimgsrc}
-                        alt="Full View"
-                        className="modal-image"
-                        onClick={(e) => e.stopPropagation()}
-                    />
+    <div className="messages-container">
+        {messages.map((msg) => (
+            <div key={msg.id} className="message-container">
+                <div
+                    className={`message-sender ${
+                        msg.msgfrom === username ? "sent" : "received"
+                    }`}
+                >
+                    {msg.msgfrom}
                 </div>
-            )}
-
-            <div className="chat-input-area">
-                <input
-                    type="file"
-                    onChange={handleImageChange}
-                    className="hidden"
-                    id="imageUpload"
-                />
-                <label htmlFor="imageUpload" className="upload-button">
-                    <RiImageAddFill size={24} />
-                </label>
-                <input
-                    type="text"
-                    placeholder="Type your message..."
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    onKeyDown={handleSendMessage}
-                    className="message-input"
-                />
-                <button onClick={handleSendMessage} className="send-button">
-                    <FiSend size={24} />
-                </button>
+                <div
+                    className={`message-bubble ${
+                        msg.msgfrom === username ? "sent" : "received"
+                    }`}
+                >
+                    {msg.message && <div className="message-text">{msg.message}</div>}
+                    {msg.imageUrl && (
+                        <button
+                            onClick={() => {
+                                setshowfullimg(true);
+                                setfullimgsrc(msg.imageUrl);
+                            }}
+                            className="image-preview"
+                        >
+                            <img src={msg.imageUrl} alt="Uploaded" />
+                        </button>
+                    )}
+                </div>
             </div>
+        ))}
+    </div>
+
+    {showfullimg && (
+        <div
+            className="full-image-modal"
+            onClick={() => setshowfullimg(false)}
+        >
+            <img
+                src={fullimgsrc}
+                alt="Full View"
+                className="modal-image"
+                onClick={(e) => e.stopPropagation()}
+            />
         </div>
+    )}
+
+    <div className="chat-input-area">
+        <input
+            type="file"
+            onChange={handleImageChange}
+            className="hidden"
+            id="imageUpload"
+        />
+        <label htmlFor="imageUpload" className="upload-button">
+            <RiImageAddFill size={24} />
+        </label>
+        <input
+            type="text"
+            placeholder="Type your message..."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            onKeyDown={handleSendMessage}
+            className="message-input"
+        />
+        <button onClick={handleSendMessage} className="send-button">
+            <FiSend size={24} />
+        </button>
+    </div>
+</div>
+
     );
 };
