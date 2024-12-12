@@ -4,6 +4,7 @@ import './Main.css';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Discussion } from './Discussion.js';
 import { Overlaydashboard } from './Overlaydashboard.js';
+import Benchmark from './Benchmark.js';
 
 import { db } from '../firebase/firebase'; 
 import { ref as dbRef, set, onValue, update } from "firebase/database";
@@ -12,6 +13,7 @@ import { Notification } from './Notification.js';
 
 import { Requestdash } from './Requestdash.js';
 import { Getlocation } from './Getlocation.js';
+
 
 
 const Main = () => {
@@ -27,11 +29,12 @@ const Main = () => {
   const [notivis,setnotivis]=useState(true);
   const [expandedchat,setexpandedchat]=useState(false);
   const[requestdash,setrequestdash]=useState(false);
+  const[benchrun,setbenchrun]=useState(false);
 
   const friend_array=[];
 
 
-/* 
+
 
   useEffect(() => {
     const generateContent = async () => {
@@ -55,7 +58,7 @@ const Main = () => {
 
     generateContent();
   }, [info]); 
- */
+ 
 
 
   useEffect(() => {
@@ -231,6 +234,21 @@ const Main = () => {
             <div id="adduser">
             </div>
             </button>
+          </div>
+        </div>
+
+        <div className='bottomarea_right'>
+          <div  className='benchmarkbar'>
+
+            {!benchrun && (
+            <button className='benchmarkerbarbtn' onClick={()=>{setbenchrun(true)}}>
+            <div className='playbenchmarkdiv'>
+              <p>Run Benchmark Test</p>
+            </div>
+            </button>
+            )}
+            {benchrun && <Benchmark/>}
+             
           </div>
         </div>
 

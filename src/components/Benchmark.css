@@ -1,0 +1,41 @@
+.benchdiv{
+h1{
+    color: rgba(255, 255, 255, 0.523);
+}
+
+p:nth-child(2){
+    margin-top: 5vh;
+}
+
+span{  
+    color:antiquewhite;
+}
+p{
+    color: rgb(65, 157, 185);
+}
+.totalscore{
+    margin-top: 5vh;
+    background-color: rgba(249, 254, 254, 0.201);
+    width: fit-content;
+    justify-self: center;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+}
+
+
+
+
+}
+
+.loadingdiv{
+    justify-self: center;
+    height: 27vh;
+    width: 10vw;
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\loading.gif");
+    background-repeat: no-repeat;
+    background-size: 10vh 10vh;
+    background-position: center;
+}

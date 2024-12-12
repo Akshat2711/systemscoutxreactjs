@@ -46,6 +46,7 @@ body {
     width: fit-content;
 }
 .aibox {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
      position: relative;
     h1{ position:absolute;
         margin-top:-2.5vh;
@@ -98,14 +99,38 @@ z-index: 100;
 bottom: 0;
 }
 
+.bottomarea_right{
+  width: fit-content;
+  height: fit-content;
+ margin-right: 2vw;
+position: absolute;
+bottom: 0;
+right: 0;
+
+}
+
+.benchmarkbar{
+  background-color: rgba(17, 16, 16, 0.589);
+  margin-bottom: 2vh;
+    backdrop-filter: blur(4px);
+    height:28vh;
+    width:21vw;
+    border-radius: 10px;
+
+}
+
+
+
+
+
 .bottombar{
     position: relative;
     margin-bottom: 2vh;
     background-color: rgba(17, 16, 16, 0.589);
     backdrop-filter: blur(4px);
     height:28vh;
-    width:83vw;
-    margin-left: 1.8vw;
+    width:60vw;
+    margin-left: 1.5vw;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
@@ -324,7 +349,7 @@ bottom: 0;
   
   .expandchatbtn{
     font-size: 3vh;
-    margin-left: 22vw;
+    margin-left: 21vw;
     color:antiquewhite;
     border: none;
     background-color: transparent;
@@ -354,6 +379,25 @@ bottom: 0;
     overflow-y: hidden;
   }
 
+
+  .playbenchmarkdiv{
+
+    font-size: 2vh;
+    color: rgba(255, 255, 255, 0.523);
+    justify-self: center;
+    height: 27vh;
+    width: 10vw;
+    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\play-button.png");
+    background-repeat: no-repeat;
+    background-size: 10vh 10vh;
+    background-position: center;
+
+  }
+
+  .benchmarkerbarbtn{
+    border: none;
+    background-color: transparent;
+  }
 
 
 
