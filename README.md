@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+                                          System Scout(Computer Lab Management System)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is designed to track and manage computers in computer labs, offices, or any location where a large number of computers are used. The system provides an intuitive platform to view detailed PC specifications, analyze performance, and facilitate real-time communication between devices.
 
-## Available Scripts
+Key Features:
 
-In the project directory, you can run:
+    View Computer Specs: Easily access and review detailed specifications for all connected PCs.
+    
+    AI-Driven PC Rating: Use AI to analyze and rate the performance of computers based on their specifications and benchmark results.
+    
+    Run Benchmark Tests: Perform performance benchmarking to measure and compare system capabilities.
+    
+    Real-Time Communication: Chat with other PCs in the network in real time.
+    
+    Dynamic PC Addition: Automatically detect and add PCs to the network when they are within a certain range.
+    
+    Invite System: Send connection invites to newly detected PCs. Invited PCs receive a pop-up notification to accept or decline the request.
+    
+    Network Management: Seamlessly manage the network of connected computers.
+Some Project Pics:
+    ![image](https://github.com/user-attachments/assets/90672e12-adc8-4fc7-a16f-7961c6400f8c)
+    ![image](https://github.com/user-attachments/assets/67635cd7-a5f2-41e1-86a5-72e2a38c964b)
+    ![image](https://github.com/user-attachments/assets/23b9ff30-08ff-440f-8adf-909b9f6231a3)
+    ![image](https://github.com/user-attachments/assets/8e4e2b3f-e704-4684-8a80-10822a2c4a1c)
+    ![image](https://github.com/user-attachments/assets/d57f00c2-0aa6-4948-8d3a-2f5847c3f3cc)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Future Enhancements:
 
-### `npm run build`
+    If time permits, additional features and improvements may be introduced to further enhance functionality and user experience.
+    
+    Getting Started
+    
+    Clone this repository to your local machine.
+    
+    Navigate to the backend folder.
+    
+    Start the backend server using the appropriate command.
+    
+    Ensure all dependencies are installed as listed below.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tech Stack:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    Frontend: React
+    
+    Backend: Python
+    
+    Database: Firebase
+    
+    API: Gemini API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Usage:
 
-### `npm run eject`
+    Once the server is running, you can:
+    
+    Add PCs to the network.
+    
+    View and analyze system specs.
+    
+    Communicate with other devices in real time.
+    
+    Perform system benchmarks.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to explore and expand this project. Contributions and suggestions are always welcome!
