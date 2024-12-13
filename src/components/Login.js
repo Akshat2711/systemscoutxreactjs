@@ -44,6 +44,7 @@ export const Login = () => {
           localStorage.setItem("user",username)
 
           alert("Sign in successful!");
+          window.location.href="/main";
           break; // Exit the loop once authenticated
         }
       }
@@ -59,6 +60,16 @@ export const Login = () => {
 
   return (
     <div className='parent'>
+      <h1 className='brandtitle'>System<span>Scout</span></h1>
+
+      {/* Background Video */}
+<video autoPlay muted loop className="bg-video">
+    <source src="/assets/login.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+</video>
+
+
+
         <div className='child'>
           {/* <div className='username'>  <h1>Unique ID:{uniqueId}</h1></div> */}
           <div className='profile_container'></div>

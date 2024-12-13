@@ -1,14 +1,17 @@
 .parent{
     width: 100vw;
     height: 100vh;
-    background-image: url(C:\codes\systemscoutxreactjs\systemscout\public\assets\login.jpg);
-    background-size: cover;
     display: flex;
+    flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  input::placeholder{
+    color:rgb(203, 204, 206) ;
+  }
   input{
     text-align: center;
-    color: rgb(205, 199, 209);
+    color: rgb(203, 204, 206) ;
     border: none;
     background-color: rgba(0, 0, 0, 0.42);
     font-size: 2vh;
@@ -29,12 +32,13 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-size: 13vw 20vh;
+    background-size: 11vw 19vh;
 }
 
 .child{
-    background-color: rgba(0, 0, 0, 0.45);
+    background-color: rgba(210, 200, 200, 0.45);
     backdrop-filter: blur(6px);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     height: 50vh;
     width:30vw;
     padding: 20px;
@@ -74,4 +78,16 @@
 .login_btn:hover{
     background-color: rgba(0, 0, 0, 0.326);
     color: rgba(240, 248, 255, 0.543);
+
+}
+
+.brandtitle{
+    color: rgba(0, 0, 0, 0.53);
+    font-size: 10vh;
+    margin-bottom: 5vh;
+
+    span{
+        color: rgba(150, 150, 150, 0.653);
+    }
+    
 }
