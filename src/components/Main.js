@@ -18,7 +18,8 @@ import { Getlocation } from './Getlocation.js';
 
 const Main = () => {
   const username = localStorage.getItem("user");
-  const genAI = new GoogleGenerativeAI("AIzaSyCwIyE-xCxFunqmq65GmhS6VgKmY1Cpkfs"); // Replace with your actual API key
+  const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GENAI_API_KEY);
+  // Replace with your actual API key
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
   const [dashVis, setDashVis] = useState(false);
