@@ -1,4 +1,4 @@
-                                          System Scout(Computer Lab Management System)
+System Scout(Computer Lab Management System)
 
 This project is designed to track and manage computers in computer labs, offices, or any location where a large number of computers are used. The system provides an intuitive platform to view detailed PC specifications, analyze performance, and facilitate real-time communication between devices.
 
