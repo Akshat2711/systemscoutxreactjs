@@ -28,7 +28,7 @@
 .profile_container{
     height:20vh;
     width:20vw;
-    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\Profile-PNG-Picture.png");
+    background-image: url("/public/assets/Profile-PNG-Picture.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

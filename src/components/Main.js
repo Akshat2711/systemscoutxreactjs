@@ -35,7 +35,7 @@ const Main = () => {
   const friend_array=[];
 
 
-/* 
+
 
   useEffect(() => {
     const generateContent = async () => {
@@ -59,7 +59,7 @@ const Main = () => {
 
     generateContent();
   }, [info]); 
- */
+ 
 
 
   useEffect(() => {
