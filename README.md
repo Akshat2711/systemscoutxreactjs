@@ -50,3 +50,4 @@ Submit a pull request with detailed notes.
 📧 Contact
 If you have any questions or feedback, feel free to reach out to me via LinkedIn or open an issue in the repository.
 
+link to website:systemscout.netlify.app
