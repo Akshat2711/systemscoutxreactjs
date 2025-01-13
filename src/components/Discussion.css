@@ -66,11 +66,10 @@
 }
 
 .chat-input-area {
-    margin-left: -12vw;
     display: flex;
     align-items: center;
     padding: 12px;
-    background-color: #2d374818;
+    background-color: #48372d18;
     gap: 8px;
     position: sticky;
     bottom: 0;
@@ -125,7 +124,9 @@
     background-color: transparent;
     border: none;
 }
-
+#imageUpload{
+    display: none;
+}
 
 
 

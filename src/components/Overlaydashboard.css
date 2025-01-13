@@ -33,7 +33,7 @@
     z-index: 10;
     right: 20px;
     top: 20px;
-    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\close.png");
+    background-image: url("/public/assets/close.png");
     background-repeat: no-repeat;
     background-size: 50px 50px;
     height: 50px;

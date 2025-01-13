@@ -34,7 +34,7 @@ p{
     justify-self: center;
     height: 27vh;
     width: 10vw;
-    background-image: url("C:\codes\systemscoutxreactjs\systemscout\public\assets\loading.gif");
+    background-image: url("/public/assets/loading.gif");
     background-repeat: no-repeat;
     background-size: 10vh 10vh;
     background-position: center;

@@ -3,11 +3,13 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs';
 import "./Login.css";
 import { db } from '../firebase/firebase'; 
 import { ref as dbRef, set, onValue } from "firebase/database";
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
 
   const [username,setUsername]=useState("");
   const [password,setPassword]=useState("");
+  const navigate = useNavigate();
   
 
   const signup=async ()=>{
@@ -44,7 +46,8 @@ export const Login = () => {
           localStorage.setItem("user",username)
 
           alert("Sign in successful!");
-          window.location.href="/main";
+          navigate('/main');
+          
           break; // Exit the loop once authenticated
         }
       }

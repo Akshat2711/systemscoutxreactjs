@@ -31,7 +31,7 @@ const Main = () => {
   const [expandedchat,setexpandedchat]=useState(false);
   const[requestdash,setrequestdash]=useState(false);
   const[benchrun,setbenchrun]=useState(false);
-
+  const[download_backend_btn,setdownload_backend_btn]=useState(true);
   const friend_array=[];
 
 
@@ -154,10 +154,23 @@ const Main = () => {
     Your browser does not support the video tag.
 </video>
 
+
+{/* download backend button */}
+{download_backend_btn &&
+<div  id='download_backend_div'>
+<a href="/server.exe" id='download_backend_btn'>
+        Download backend!
+</a>
+<p>after downloading make it run!make sure nothing is running on port 5000</p>
+<button onClick={()=>{setdownload_backend_btn(false)}}>
+  Close
+</button>
+</div>
+}
       
 
 {/* notification */}
-      {(notivis) &&<Notification ignorebtn={()=>setnotivis(false)}/>}
+{(notivis) &&<Notification ignorebtn={()=>setnotivis(false)}/>}
 
 {/* requestdash */}
 {(requestdash) && <Requestdash closerequestdash={()=>{setrequestdash(false)}} />}
