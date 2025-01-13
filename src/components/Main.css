@@ -206,12 +206,13 @@ right: 0;
     margin-left: 2vw;
     margin-right: 2vw;
     height:65vh;
-    
+    text-align: left;
     background-color: rgba(17, 16, 16, 0.589);
     backdrop-filter: blur(4px);
     h1{font-size:5vh;
         margin-top: -2vh;
         color:rgba(255, 255, 255, 0.523);
+        text-align: center;
     }
     position: relative;
 
@@ -350,8 +351,8 @@ right: 0;
   
   .expandchatbtn{
     font-size: 3vh;
-    margin-right: 21vw;
-    color:rgba(250, 235, 215, 0.443);
+    
+    color:rgba(250, 235, 215, 0.279);
     border: none;
     background-color: transparent;
 
